@@ -16,9 +16,9 @@ else
     exit 1 
 fi
 
-cd build_all/esp32
+cd $IDF_PATH/components/azure-iot/sample
 echo "building in" $(pwd)
-make
+#make
 if [ $? = 0 ]
     then echo "built okay"
 else 
