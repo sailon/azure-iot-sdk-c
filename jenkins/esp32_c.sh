@@ -25,10 +25,18 @@ proj_dir=$IDF_PATH/components/azure-iot/sample/main
 cp $sample_dir/iothub_client_sample_mqtt.c  $proj_dir
 cp $sample_dir/iothub_client_sample_mqtt.h  $proj_dir
 
+make defconfig
+if [ $? = 0 ]
+    then echo "config generated okay"
+else 
+    echo "!!!FAILED!!! config generation failed"
+    exit result
+fi
+
 make
 if [ $? = 0 ]
     then echo "built okay"
 else 
-    echo "!!!FAILED!!! build failed"
+    echo "!!!FAILED!!! make failed"
     exit result
 fi
