@@ -29,7 +29,7 @@ cd $proj_dir
 echo "project dir: " $(pwd)
 dir
 
-#make
+make
 if [ $? = 0 ]
     then echo "built okay"
 else 
