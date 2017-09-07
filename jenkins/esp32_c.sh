@@ -25,8 +25,8 @@ proj_dir=$IDF_PATH/components/azure-iot/sample/main
 cp $sample_dir/iothub_client_sample_mqtt.c  $proj_dir
 cp $sample_dir/iothub_client_sample_mqtt.h  $proj_dir
 
-cd $sample_dir
-echo "sample dir: " $(pwd)
+cd $proj_dir
+echo "project dir: " $(pwd)
 dir
 
 #make
