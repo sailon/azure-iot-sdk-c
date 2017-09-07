@@ -18,6 +18,17 @@ fi
 
 cd $IDF_PATH/components/azure-iot/sample
 echo "building in" $(pwd)
+
+# Copy the sample files
+sample_dir=$IDF_PATH/components/azure-iot/sdk/iothub_client/samples/iothub_client_sample_mqtt
+proj_dir=$IDF_PATH/components/azure-iot/sample/main
+cp $sample_dir/iothub_client_sample_mqtt.c  $proj_dir
+cp $sample_dir/iothub_client_sample_mqtt.h  $proj_dir
+
+cd $sample_dir
+echo "sample dir: " $(pwd)
+dir
+
 #make
 if [ $? = 0 ]
     then echo "built okay"
