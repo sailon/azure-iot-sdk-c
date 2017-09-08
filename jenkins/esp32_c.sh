@@ -30,7 +30,7 @@ if [ $? = 0 ]
     then echo "config generated okay"
 else 
     echo "!!!FAILED!!! config generation failed"
-    exit result
+    exit $?
 fi
 
 make
@@ -38,5 +38,5 @@ if [ $? = 0 ]
     then echo "built okay"
 else 
     echo "!!!FAILED!!! make failed"
-    exit result
+    exit $?
 fi
